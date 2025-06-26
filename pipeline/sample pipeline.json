@@ -1,0 +1,28 @@
+{
+	"name": "sample pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "Country Name",
+				"type": "SetVariable",
+				"dependsOn": [],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "CountryName",
+					"value": "Japan"
+				}
+			}
+		],
+		"variables": {
+			"CountryName": {
+				"type": "String",
+				"defaultValue": "USA"
+			}
+		},
+		"annotations": []
+	}
+}
