@@ -1,0 +1,17 @@
+{
+	"name": "testadf9001",
+	"properties": {
+		"globalParameters": {
+			"filePath": {
+				"type": "string",
+				"value": "abfss://abc@cde"
+			}
+		}
+	},
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "d9194465-efe2-4f83-8a7c-1ecdfca824e2",
+		"tenantId": "c774a1c7-1bc8-448f-9cbd-d01fa3a15fd1"
+	}
+}

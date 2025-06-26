@@ -1,0 +1,47 @@
+{
+	"name": "example_parameterised_pipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "parameterised_nb_run",
+				"type": "DatabricksNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebookPath": "/Users/kaustubhmahajan1994@outlook.com/parametrised_nb",
+					"baseParameters": {
+						"fileName": {
+							"value": "@pipeline().parameters.fileName",
+							"type": "Expression"
+						}
+					}
+				},
+				"linkedServiceName": {
+					"referenceName": "ADB_LS",
+					"type": "LinkedServiceReference"
+				}
+			}
+		],
+		"parameters": {
+			"fileName": {
+				"type": "string",
+				"defaultValue": "A._Stucki_BDT_Internal_PA_Fastenal_US_Benchmark_Summary_with_Price.xlsx"
+			}
+		},
+		"variables": {
+			"filePath": {
+				"type": "String"
+			}
+		},
+		"annotations": [],
+		"lastPublishTime": "2025-06-20T02:21:33Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}
